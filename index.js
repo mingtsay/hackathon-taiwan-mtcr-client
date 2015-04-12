@@ -162,7 +162,7 @@ function decodeBuf(buf){
 		case 0x30:
 			return {
 				'action': 'someoneJoined',
-				'usedId': buf[headerLen],
+				'userId': buf[headerLen],
 				'nickname': buf.slice(headerLen+2,headerLen+2+buf[headerLen+1]).toString()
 			};
 		case 0x31:
