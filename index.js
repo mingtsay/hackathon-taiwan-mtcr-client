@@ -219,7 +219,7 @@ function decodeBuf(buf){
 					'userId': buf[procAt++],
 					'nickname': buf.slice(procAt+1,procAt+1+buf[procAt]).toString()
 				});
-				procAt+=buf[procAt];
+				procAt+=buf[procAt]+1;
 				listLen++;
 			}
 			return {
